@@ -94,7 +94,7 @@ void create_walls() {
 void Snake::play_again() {
 	List::clean(); // erase all objects and allocate memory
 	while (!elements.empty()) elements.pop(); // clear element queue.
-	AppleWallBuilder::create("..\\levels\\sample.txt");
+	AppleWallBuilder::create("levels\\sample.txt");
 	head = new SnakeHead({cell_size/2, cell_size/2});
 	elements.push(build_element());
 	create_walls();

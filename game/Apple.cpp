@@ -4,6 +4,6 @@
 Apple::Apple(Point pos, int size):Object(pos, size,size, green){
 }
 
-void eated() {
+void Apple::eated() {
 	AppleWallBuilder::eated_apple(this);
 }

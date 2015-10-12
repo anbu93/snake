@@ -22,7 +22,7 @@ void AppleWallBuilder::create(const char* level_name){
 void AppleWallBuilder::eated_apple(Apple* apple){
 	check_instance();
 	do {
-		apple->position = random_point();
+		apple->position = unique_instance->random_point();
 	} while (Collision::collise(apple) != apple);
 }
 
@@ -32,7 +32,7 @@ void AppleWallBuilder::eated_apple(Apple* apple){
 AppleWallBuilder::AppleWallBuilder() {}
 
 void AppleWallBuilder::check_instance() {
-	if (!unique_instance) 
+	if (!unique_instance)
 		unique_instance = new AppleWallBuilder();
 }
 
@@ -46,22 +46,22 @@ Point AppleWallBuilder::random_point() {
 	return Point(x, y);
 }
 
-void AppleWallBuilder::_create(const char* leel_name){
-	ifstream level(level_name);
+void AppleWallBuilder::_create(const char* level_name){
+	std::ifstream level(level_name);
 	if (level.is_open() == false) {
 		std::cout << "Not find level map " << level_name;
 		std::cout << " create sample level." << std::endl;
-		return create("..\\levels\\sample.txt");
+		return create("levels\\sample.txt");
 	}
 	char mask;
 	for(int i = 0; i < HEIGHT; i+= cell_size){
 		for(int j = 0; j < WIDTH; j+= cell_size){
 			if (level.eof()) {
-				std::cout << "unexpectet end of file " << leel_name << std::endl;
+				std::cout << "unexpectet end of file " << level_name << std::endl;
 				return;
 			}
 			level >> mask;
-			if (mask != '.') _create_object(mask, Point(j, i));
+			if (mask != '.') _create_object(mask, Point(j, (HEIGHT-i) - (HEIGHT-i)%cell_size));
 		}
 	}
 }
@@ -80,6 +80,6 @@ void AppleWallBuilder::_create_object(char mask, Point pos){
 			default: // error. not this mask!
 				std::cout << "not a mask " << mask;
 				std::cout << " on line" << pos.y << " char of " << pos.x << std::endl;
-				break; 
+				break;
 			}
 }

@@ -1,10 +1,11 @@
 #ifndef APPLE_WALL_BUILDER_H
 #define APPLE_WALL_BUILDER_H
 #include "..\Point.h"
+#include "Apple.h"
 
 class AppleWallBuilder {
 private:
-	AppleWallBuilder* unique_instance;
+	static AppleWallBuilder* unique_instance;
 public:
 	static void create(const char* level_name);
 	static void eated_apple(Apple* apple);

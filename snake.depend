@@ -1,0 +1,154 @@
+# depslib dependency file v1.0
+1444500283 source:c:\cpp\snake\collision.cpp
+	"Collision.h"
+	<cmath>
+
+1444495045 c:\cpp\snake\collision.h
+	"List.h"
+
+1444484279 c:\cpp\snake\list.h
+	"Object.h"
+	<vector>
+
+1444484556 c:\cpp\snake\object.h
+	"Point.h"
+	"Color.h"
+
+1444484760 c:\cpp\snake\point.h
+
+1444503867 c:\cpp\snake\color.h
+
+1444484153 source:c:\cpp\snake\color.cpp
+	"Color.h"
+	"GL\glut.h"
+
+1444484242 source:c:\cpp\snake\game.cpp
+	"Game.h"
+
+1444485079 c:\cpp\snake\game.h
+	"Scene.h"
+
+1444484165 c:\cpp\snake\scene.h
+
+1444619197 source:c:\cpp\snake\game\apple.cpp
+	"Apple.h"
+	"AppleWallBuilder.h"
+
+1444615995 c:\cpp\snake\game\apple.h
+	"..\Object.h"
+
+1444619453 c:\cpp\snake\game\applewallbuilder.h
+	"..\Point.h"
+	"Apple.h"
+
+1444499073 source:c:\cpp\snake\game\level.cpp
+	"Level.h"
+	"..\List.h"
+	"..\List.h"
+
+1444492057 c:\cpp\snake\game\level.h
+	"..\Scene.h"
+	"Snake.h"
+
+1444502460 c:\cpp\snake\game\snake.h
+	"SnakeElement.h"
+	<queue>
+	"..\Direct.h"
+	"SnakeHead.h"
+
+1444491513 c:\cpp\snake\game\snakeelement.h
+	"..\Object.h"
+
+1444497048 c:\cpp\snake\direct.h
+
+1444551986 c:\cpp\snake\game\snakehead.h
+	"..\Object.h"
+	"..\Direct.h"
+
+1444620638 source:c:\cpp\snake\game\snake.cpp
+	"Snake.h"
+	"..\Global.h"
+	"..\List.h"
+	"..\Input.h"
+	"Apple.h"
+	"Wall.h"
+	"SnakeInput.h"
+	"..\Collision.h"
+	"AppleWallBuilder.h"
+	<iostream>
+
+1444552056 c:\cpp\snake\global.h
+
+1444497418 c:\cpp\snake\input.h
+
+1444496191 c:\cpp\snake\game\wall.h
+	"..\Object.h"
+
+1444492708 c:\cpp\snake\game\snakeinput.h
+	"..\Input.h"
+	"Snake.h"
+
+1444490209 source:c:\cpp\snake\game\snakeelement.cpp
+	"SnakeElement.h"
+
+1444551984 source:c:\cpp\snake\game\snakehead.cpp
+	"SnakeHead.h"
+	"..\Global.h"
+
+1444498148 source:c:\cpp\snake\game\snakeinput.cpp
+	"SnakeInput.h"
+
+1444484290 source:c:\cpp\snake\graphics.cpp
+	"Graphics.h"
+	"List.h"
+
+1444484256 c:\cpp\snake\graphics.h
+
+1444498783 source:c:\cpp\snake\input.cpp
+	"Input.h"
+
+1444484481 source:c:\cpp\snake\list.cpp
+	<vector>
+	"List.h"
+
+1444549099 source:c:\cpp\snake\main.cpp
+	<iostream>
+	<GL\glut.h>
+	<ctime>
+	<cstdlib>
+	"OpenGL.h"
+	"Global.h"
+	"Game.h"
+	"game\Level.h"
+
+1444545943 c:\cpp\snake\opengl.h
+
+1444503945 source:c:\cpp\snake\object.cpp
+	<GL\glut.h>
+	"Object.h"
+	"List.h"
+
+1444551419 source:c:\cpp\snake\opengl.cpp
+	<GL/glut.h>
+	<cstdlib>
+	<stdio.h>
+	<malloc.h>
+	"OpenGL.h"
+	"Global.h"
+	"Graphics.h"
+	"Input.h"
+	"Game.h"
+
+1444458692 source:c:\cpp\snake\scene.cpp
+	"Scene.h"
+
+1444620373 source:c:\cpp\snake\game\applewallbuilder.cpp
+	<cstdlib>
+	<fstream>
+	<iostream>
+	"AppleWallBuilder.h"
+	"Apple.h"
+	"Wall.h"
+	"..\Collision.h"
+	"..\Global.h"
+
