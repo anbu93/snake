@@ -89,17 +89,13 @@ void create_walls() {
 	object = new Wall(p, WIDTH, cell_size);
 	p = Point(WIDTH/2, HEIGHT+cell_size/2);
 	object = new Wall(p, WIDTH, cell_size);
-
-	p = Point(WIDTH/cell_size/2*cell_size+cell_size/2, HEIGHT/cell_size/2*cell_size+cell_size/2);
-	object = new Apple(p, cell_size);
-	p = Point(WIDTH/2+cell_size/2, HEIGHT/2+cell_size/2);
 }
 
 void Snake::play_again() {
 	List::clean(); // erase all objects and allocate memory
 	while (!elements.empty()) elements.pop(); // clear element queue.
+	AppleWallBuilder::create("..\\levels\\sample.txt");
 	head = new SnakeHead({cell_size/2, cell_size/2});
-	// TODO AppleWallBuilder::run();
 	elements.push(build_element());
 	create_walls();
 }

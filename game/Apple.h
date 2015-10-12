@@ -4,7 +4,6 @@
 
 class Apple : public Object {
 public:
-	static void create(int number);
 	Apple(Point pos, int size);
 	void eated();
 };
